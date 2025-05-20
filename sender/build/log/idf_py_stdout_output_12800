@@ -1,0 +1,55 @@
+[0;32mI (18) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time May 16 2025 16:13:28[0m
+[0;32mI (18) boot: chip revision: v0.1[0m
+[0;32mI (19) boot: efuse block revision: v0.3[0m
+[0;32mI (21) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (29) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (33) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (40) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (46) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (53) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (59) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (66) boot:  3 storage          Unknown data     01 82 00110000 00180000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0a6c8h ( 42696) map[0m
+[0;32mI (91) esp_image: segment 1: paddr=0001a6f0 vaddr=40800000 size=05928h ( 22824) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=15f40h ( 89920) map[0m
+[0;32mI (114) esp_image: segment 3: paddr=00035f68 vaddr=40805928 size=06d5ch ( 27996) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=0003cccc vaddr=4080c690 size=01838h (  6200) load[0m
+[0;32mI (126) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (126) boot: Disabling RNG early entropy source...[0m
+[0;32mI (140) cpu_start: Unicore app[0m
+[0;32mI (148) cpu_start: Pro cpu start user code[0m
+[0;32mI (148) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (149) app_init: Application information:[0m
+[0;32mI (149) app_init: Project name:     spi_slave_sender[0m
+[0;32mI (153) app_init: App version:      1[0m
+[0;32mI (156) app_init: Compile time:     May 16 2025 16:08:19[0m
+[0;32mI (161) app_init: ELF file SHA256:  26022a596...[0m
+[0;32mI (166) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (170) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (173) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (177) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (181) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (187) heap_init: At 4080EE40 len 0006D7D0 (437 KiB): RAM[0m
+[0;32mI (193) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (198) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (204) spi_flash: detected chip: generic[0m
+[0;32mI (207) spi_flash: flash io: dio[0m
+[0;33mW (210) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (222) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (228) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (235) coexist: coex firmware version: e727207[0m
+[0;32mI (253) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (254) main_task: Started on CPU0[0m
+[0;32mI (254) main_task: Calling app_main()[0m
+Entering app_main()
+Opening file..... 
+[0;32mI (254) spiMaster: Reading file[0m
+[1;31mE (254) spiMaster: Failed to open file[0m
+Closing file..... 
+[0;32mI (264) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (264) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (274) main_task: Returned from app_main()[0m

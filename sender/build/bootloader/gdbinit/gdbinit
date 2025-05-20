@@ -1,0 +1,2 @@
+source C:/Projects/Wifi_Module/software/spiMaster_test/sender/build/bootloader/gdbinit/symbols
+source C:/Projects/Wifi_Module/software/spiMaster_test/sender/build/bootloader/gdbinit/connect
