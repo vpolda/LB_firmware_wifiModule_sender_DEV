@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "spi_slave_sender",
-    "project_version":    "1",
+    "project_version":    "fbd857a-dirty",
     "project_path":       "C:/Projects/Wifi_Module/software/spiMaster_test/sender",
     "idf_path":           "C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf",
     "build_dir":          "C:/Projects/Wifi_Module/software/spiMaster_test/sender/build",

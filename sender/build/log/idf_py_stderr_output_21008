@@ -1,0 +1,21 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM9 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM9 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40809494: xTaskPriorityDisinherit at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5139
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408094b6: xTaskPriorityDisinherit at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5159
+--- 0x40806f38: prvCopyDataToQueue at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2470
+[0m
+[0;33m--- 0x40028140: __retarget_lock_acquire_recursive in ROM
+[0m
+[0;33m--- 0x42008f88: uart_write at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/esp_driver_uart/src/uart_vfs.c:227
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpigxftqis"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpigxftqis': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0m

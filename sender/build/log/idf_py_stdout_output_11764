@@ -1,371 +1,61 @@
-[0;32mI (18) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
-[0;32mI (18) boot: compile time May 16 2025 16:13:28[0m
-[0;32mI (18) boot: chip revision: v0.1[0m
-[0;32mI (19) boot: efuse block revision: v0.3[0m
-[0;32mI (21) boot.esp32c6: SPI Speed      : 80MHz[0m
-[0;32mI (25) boot.esp32c6: SPI Mode       : DIO[0m
-[0;32mI (29) boot.esp32c6: SPI Flash Size : 4MB[0m
-[0;32mI (33) boot: Enabling RNG early entropy source...[0m
-[0;32mI (37) boot: Partition Table:[0m
-[0;32mI (40) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (46) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (53) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (59) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (66) boot:  3 storage          Unknown data     01 82 00110000 00180000[0m
-[0;32mI (72) boot: End of partition table[0m
-[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0b2bch ( 45756) map[0m
-[0;32mI (92) esp_image: segment 1: paddr=0001b2e4 vaddr=40800000 size=04d34h ( 19764) load[0m
-[0;32mI (96) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1d0c4h (118980) map[0m
-[0;32mI (120) esp_image: segment 3: paddr=0003d0ec vaddr=40804d34 size=0893ch ( 35132) load[0m
-[0;32mI (128) esp_image: segment 4: paddr=00045a30 vaddr=4080d670 size=018f0h (  6384) load[0m
-[0;32mI (133) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (133) boot: Disabling RNG early entropy source...[0m
-[0;32mI (146) cpu_start: Unicore app[0m
-[0;32mI (154) cpu_start: Pro cpu start user code[0m
-[0;32mI (154) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (154) app_init: Application information:[0m
-[0;32mI (155) app_init: Project name:     spi_slave_sender[0m
-[0;32mI (159) app_init: App version:      1[0m
-[0;32mI (162) app_init: Compile time:     May 16 2025 16:08:19[0m
-[0;32mI (167) app_init: ELF file SHA256:  09d81513a...[0m
-[0;32mI (172) app_init: ESP-IDF:          v5.4.1[0m
-[0;32mI (175) efuse_init: Min chip rev:     v0.0[0m
-[0;32mI (179) efuse_init: Max chip rev:     v0.99 [0m
-[0;32mI (183) efuse_init: Chip rev:         v0.1[0m
-[0;32mI (187) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (193) heap_init: At 4080FEE0 len 0006C730 (433 KiB): RAM[0m
-[0;32mI (199) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
-[0;32mI (204) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
-[0;32mI (210) spi_flash: detected chip: generic[0m
-[0;32mI (213) spi_flash: flash io: dio[0m
-[0;33mW (216) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
-[0;32mI (228) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
-[0;32mI (234) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
-[0;32mI (241) coexist: coex firmware version: e727207[0m
-[0;32mI (259) coexist: coexist rom version 5b8dcfa[0m
-[0;32mI (260) main_task: Started on CPU0[0m
-[0;32mI (260) main_task: Calling app_main()[0m
-Entering app_main()
-[0;32mI (260) spiMaster: Initializing SPIFFS[0m
-[0;32mI (310) spiMaster: Partition size: total: 1438481, used: 1053949[0m
-[0;32mI (310) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
-Telling slave new file
-Now waiting for slave
-Received: 
-Opening file..... 
-[0;32mI (4190) spiMaster: Reading file[0m
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 0 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 1 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 2 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 3 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 4 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 5 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 6 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 7 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 8 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 9 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 10 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 11 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 12 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 13 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 14 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 15 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 16 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 17 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 18 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 19 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 20 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 21 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 22 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 23 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 24 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 25 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 26 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 27 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 28 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 29 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 30 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 31 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 32 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 33 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 34 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 35 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 36 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 37 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 38 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 39 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 40 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 41 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 42 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 43 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 44 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 45 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 46 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 47 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 48 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 49 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 50 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 51 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 52 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 53 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 54 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 55 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 56 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 57 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 58 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 59 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 60 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 61 chunk of file
-Received: 
-Entering reading a new chunk
-success reading chunk
-Now waiting for slave
-Sent the 62 chunk of file
-Received: 
+[1/6] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Projects\Wifi_Module\software\spiMaster_test\sender\build\esp-idf\esptool_py && c:\Users\Tori\esp\v5.4.1\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Projects/Wifi_Module/software/spiMaster_test/sender/build/partition_table/partition-table.bin C:/Projects/Wifi_Module/software/spiMaster_test/sender/build/spi_slave_sender.bin"
+spi_slave_sender.bin binary size 0x376d0 bytes. Smallest app partition is 0x100000 bytes. 0xc8930 bytes (78%) free.
+[2/6] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Projects\Wifi_Module\software\spiMaster_test\sender\build\esp-idf\main && c:\Users\Tori\esp\v5.4.1\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/spiffs/spiffsgen.py 0x180000 C:/Projects/Wifi_Module/software/spiMaster_test/sender/spiffs_image C:/Projects/Wifi_Module/software/spiMaster_test/sender/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[3/6] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Projects\Wifi_Module\software\spiMaster_test\sender\build\bootloader\esp-idf\esptool_py && c:\Users\Tori\esp\v5.4.1\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Projects/Wifi_Module/software/spiMaster_test/sender/build/bootloader/bootloader.bin"
+Bootloader binary size 0x55f0 bytes. 0x2a10 bytes (33%) free.
+[4/6] No install step for 'bootloader'
+[5/6] Completed 'bootloader'
+[5/6] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Tori\esp\v5.4.1\v5.4.1\esp-idf\components\esptool_py && C:\Users\Tori\esp\v5.4.1\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf -D SERIAL_TOOL=c:/Users/Tori/esp/v5.4.1/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Projects/Wifi_Module/software/spiMaster_test/sender/build -P C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32c6 -p COM9 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 spi_slave_sender.bin 0x8000 partition_table/partition-table.bin 0x110000 storage.bin
+esptool.py v4.8.1
+Serial port COM9
+Connecting....
+Chip is ESP32-C6 (QFN40) (revision v0.1)
+Features: WiFi 6, BT 5, IEEE802.15.4
+Crystal is 40MHz
+MAC: f0:f5:bd:ff:fe:0e:5c:d8
+BASE MAC: f0:f5:bd:0e:5c:d8
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00047fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00110000 to 0x0028ffff...
+SHA digest in image updated
+Compressed 22000 bytes to 13585...
+Writing at 0x00000000... (100 %)
+Wrote 22000 bytes (13585 compressed) at 0x00000000 in 0.6 seconds (effective 296.2 kbit/s)...
+Hash of data verified.
+Compressed 227024 bytes to 118700...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001b68f... (25 %)
+Writing at 0x00021e54... (37 %)
+Writing at 0x000290c6... (50 %)
+Writing at 0x0003044f... (62 %)
+Writing at 0x0003787c... (75 %)
+Writing at 0x0003e4e6... (87 %)
+Writing at 0x0004547c... (100 %)
+Wrote 227024 bytes (118700 compressed) at 0x00010000 in 3.2 seconds (effective 574.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 119...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (119 compressed) at 0x00008000 in 0.1 seconds (effective 238.9 kbit/s)...
+Hash of data verified.
+Compressed 1572864 bytes to 86135...
+Writing at 0x00110000... (16 %)
+Writing at 0x0011a7cc... (33 %)
+Writing at 0x001213bc... (50 %)
+Writing at 0x00128d9a... (66 %)
+Writing at 0x00130c4a... (83 %)
+Writing at 0x00137fc3... (100 %)
+Wrote 1572864 bytes (86135 compressed) at 0x00110000 in 8.4 seconds (effective 1489.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

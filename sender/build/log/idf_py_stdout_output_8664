@@ -1,0 +1,200 @@
+
+105 byte: 00
+106 byte: 00
+107 byte: 00
+108 byte: 00
+109 byt10 byte: 00
+111 byte: 00
+112 byte: 00
+113 byte: 31
+114 byte: 36
+115 byte: 3A
+116 byte: 35
+117 byte: 39
+118 byte: 3A
+119 byte: 32
+120 byte: 37
+121 byte:I (18) boot: ESP-IDF v5.4.1 2nd stage bootloader
+[0;32mI (18) boot: compile time Jun  2 2025 15:53:48[0m
+[0;32mI (18) boot: chip revision: v0.1[0m
+[0;32mI (19) boot: efuse block revision: v0.3[0m
+[0;32mI (21) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (29) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (33) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (40) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (46) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (53) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (59) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (66) boot:  3 storage          Unknown data     01 82 00110000 00180000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0b2d4h ( 45780) map[0m
+[0;32mI (92) esp_image: segment 1: paddr=0001b2fc vaddr=40800000 size=04d1ch ( 19740) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1d364h (119652) map[0m
+[0;32mI (120) esp_image: segment 3: paddr=0003d38c vaddr=40804d1c size=08910h ( 35088) load[0m
+[0;32mI (128) esp_image: segment 4: paddr=00045ca4 vaddr=4080d630 size=018f0h (  6384) load[0m
+[0;32mI (133) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (133) boot: Disabling RNG early entropy source...[0m
+[0;32mI (146) cpu_start: Unicore app[0m
+[0;32mI (154) cpu_start: Pro cpu start user code[0m
+[0;32mI (154) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (155) app_init: Application information:[0m
+[0;32mI (155) app_init: Project name:     spi_slave_sender[0m
+[0;32mI (159) app_init: App version:      fbd857a-dirty[0m
+[0;32mI (163) app_init: Compile time:     Jun  2 2025 15:51:45[0m
+[0;32mI (168) app_init: ELF file SHA256:  8160c9f8e...[0m
+[0;32mI (173) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (177) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (180) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (184) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (188) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (195) heap_init: At 4080FEA0 len 0006C770 (433 KiB): RAM[0m
+[0;32mI (200) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (205) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (211) spi_flash: detected chip: generic[0m
+[0;32mI (214) spi_flash: flash io: dio[0m
+[0;33mW (217) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (235) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (242) coexist: coex firmware version: e727207[0m
+[0;32mI (260) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (261) main_task: Started on CPU0[0m
+[0;32mI (261) main_task: Calling app_main()[0m
+Entering app_main()
+[0;32mI (261) spiMaster: Initializing SPIFFS[0m
+[0;32mI (311) spiMaster: Partition size: total: 1438481, used: 153612[0m
+[0;32mI (311) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+Opening file..... 
+[0;32mI (311) spiMaster: Reading file[0m
+Opened file of size: 152096
+-------Entering reading a new chunk: CMD 129------
+-1 byte: 81
+0 byte: 7E
+1 byte: E9
+2 byte: 05
+3 byte: 02
+4 byte: 1F
+5 byte: 9C
+6 byte: 02
+7 byte: 80
+8 byte: 40
+9 byte: EE
+10 byte: 00
+11 byte: 00
+12 byte: 00
+13 byte: 17
+14 byte: 00
+15 byte: 00
+16 byte: 00
+17 byte: 00
+18 byte: 63
+19 byte: 00
+20 byte: 00
+21 byte: 00
+22 byte: 00
+23 byte: 00
+24 byte: 01
+25 byte: 20
+26 byte: 00
+27 byte: 02
+28 byte: 42
+29 byte: D4
+30 byte: 8A
+31 byte: 00
+32 byte: 00
+33 byte: 32
+34 byte: 54
+35 byte: CD
+36 byte: AB
+37 byte: 00
+38 byte: 00
+39 byte: 00
+40 byte: 00
+41 byte: 00
+42 byte: 00
+43 byte: 00
+44 byte: 00
+45 byte: 00
+46 byte: 00
+47 byte: 00
+48 byte: 00
+49 byte: 31
+50 byte: 00
+51 byte: 00
+52 byte: 00
+53 byte: 00
+54 byte: 00
+55 byte: 00
+56 byte: 00
+57 byte: 00
+58 byte: 00
+59 byte: 00
+60 byte: 00
+61 byte: 00
+62 byte: 00
+63 byte: 00
+64 byte: 00
+65 byte: 00
+66 byte: 00
+67 byte: 00
+68 byte: 00
+69 byte: 00
+70 byte: 00
+71 byte: 00
+72 byte: 00
+73 byte: 00
+74 byte: 00
+75 byte: 00
+76 byte: 00
+77 byte: 00
+78 byte: 00
+79 byte: 00
+80 byte: 00
+81 byte: 68
+82 byte: 65
+83 byte: 6C
+84 byte: 6C
+85 byte: 6F
+86 byte: 5F
+87 byte: 77
+88 byte: 6F
+89 byte: 72
+90 byte: 6C
+91 byte: 64
+92 byte: 00
+93 byte: 00
+94 byte: 00
+95 byte: 00
+96 byte: 00
+97 byte: 00
+98 byte: 00
+99 byte: 00
+100 byte: 00
+101 byte: 00
+102 byte: 00
+103 byte: 00
+104 byte: 00
+105 byte: 00
+106 byte: 00
+107 byte: 00
+108 byte: 00
+109 byte: 00
+110 byte: 00
+111 byte: 00
+112 byte: 00
+113 byte: 31
+114 byte: 36
+115 byte: 3A
+116 byte: 35
+117 byte: 39
+118 byte: 3A
+119 byte: 32
+120 byte: 37
+121 byte: 00
+122 byte: 00
+123 byte: 00
+124 byte: 00
+125 byte: 00
+126 byte: 00
+Now waiting for slave

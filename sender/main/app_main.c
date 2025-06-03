@@ -58,65 +58,89 @@ task waits for this semaphore to be given before queueing a transmission.
 #define SENDER_HOST SPI2_HOST
 #endif
 
-//-----------------------ADDED------------------------//
-//#define EOF                  -1
 #define FRE                  -2
 
-#define BUF_SIZE            128
-#define CMD_SIZE            1
+#define DATA_SIZE           1021
+#define CMD_SIZE            3
+#define TRANS_SIZE          1024
+
+#define HASH_LEN 32
+
+//Debug ifdefs below 
+//#define PART_FILE
+#define PART_FILE_NUM       3
+//#define DEBUG_SENDBUFFER
+#define DEBUG_SENDBUFFER_LAST
+#define DEBUG_FREAD_SIZE
+
 
 static const char *TAG = "spiMaster";
 
-int binary_file_length = 0;
+//file shouldn't be more than 2MB, both of these are in bytes
+int binary_file_length;
+uint32_t file_size;
 
 char file_name[] = "/spiffs/simple_ota.bin";
 
-static FILE* open_file()
+static void open_file(FILE** file)
 {
+    file_size = 0;
+    binary_file_length = 0;
+    
     ESP_LOGI(TAG, "Reading file");
 
     // Open for reading hello.txt
-    FILE* file = fopen("/spiffs/simple_ota.bin", "r");
-    if (file == NULL) {
+    *file = fopen("/spiffs/simple_ota.bin", "r");
+    if (*file == NULL) {
         ESP_LOGE(TAG, "Failed to open file");
-        return NULL;
+        return;
     }
 
-    return file;
+    #ifdef PART_FILE
+        file_size = PART_FILE_NUM*DATA_SIZE;
+    #else  
+        //gets how many bytes in a file
+        fseek(*file, 0, SEEK_END);      // Move to end of file
+        file_size = ftell(*file);
+        rewind(*file);  //restart pointer to bg of file 
+    #endif
+    
+    printf("Opened file of size: %ld\n", file_size);
 }
 
-static uint8_t read_file_chunk(FILE* file, uint8_t* sendbuf){
+static uint16_t read_file_chunk(FILE* file, uint8_t* sendbuf, int data_size){
 
     //allocating memory on core and clearing previous
-    memset(sendbuf, 0, BUF_SIZE - CMD_SIZE);
+    memset(sendbuf, 0, data_size);
+
+    //read in chunk at current fread pointer
+    uint16_t read_bytes = fread(sendbuf + CMD_SIZE, 1, data_size, file);  
 
     //CMD handling headers here
     //cmd to end ota
     sendbuf[0] = 129;
+    sendbuf[1] = read_bytes >> 8;
+    sendbuf[2] = read_bytes & 0x00FF;
 
-    //read in chunk at current fread pointer   
-    fread(sendbuf + CMD_SIZE, 1, BUF_SIZE - CMD_SIZE, file);
-
-    #ifdef DEBUG_SENDBUFFER
-    printf("Last byte: %02X\n", sendbuf[BUF_SIZE-1]);
-    printf("First data byte: %02X\n", sendbuf[CMD_SIZE]);
-    printf("First byte: %02X\n", sendbuf[0]);
-    #endif
-
-    binary_file_length += sizeof(sendbuf);
-
-    //check if at the end of the file
-    if (sizeof(sendbuf) < BUF_SIZE - CMD_SIZE) {
-        if (feof(file)) {
-            printf("EOF reached\n");
-            return EOF;
-        } else if (ferror(file)) {
-            printf("File read error\n");
+    if ((read_bytes) > 0){
+        binary_file_length += read_bytes;
+        //check if at the end of the file and can transmit a part of a chunk
+        if (read_bytes < data_size) {
+            //in case of left over bytes
+            printf("EOF reached winthin bounds\n");
+            return read_bytes;
+        } else if (read_bytes == data_size) {
+            return read_bytes; //or data_size
+        } else {
             return FRE;
         }
+
+    } else if (ferror(file)) {
+        printf("File read error\n");
+        return FRE;
     }
 
-    //return no error
+    //return no error but no data, file is done
     return 0;
 
 }
@@ -165,8 +189,8 @@ void app_main(void)
     
 
     int n = 0;
-    uint8_t sendbuf[BUF_SIZE] = {0};
-    uint8_t recvbuf[BUF_SIZE] = {0};
+    uint8_t sendbuf[TRANS_SIZE] = {0};
+    uint8_t recvbuf[TRANS_SIZE] = {0};
     spi_transaction_t t;
     memset(&t, 0, sizeof(t));
 
@@ -228,19 +252,35 @@ void app_main(void)
 
 //-----------------------ADDED------------------------//
 //while slave hasn't initiallized anything yet,
+    binary_file_length = 0;
+
+    //setup transaction
+    t.length = TRANS_SIZE * 8;
+    t.tx_buffer = sendbuf;
+    t.rx_buffer = recvbuf;
+
+    //send dummy command
+    //tell the slave to get in image download mode
+    printf("-------Telling slave to setup for ota: CMD 128------\n");
+
+    //cmd to start ota
+    sendbuf[0] = 128;
+
+    //Wait for slave to be ready for next byte before sending
+    printf("Now waiting for slave\n");
+    //xSemaphoreTake(rdySem, portMAX_DELAY); //Wait until slave is ready
+    while(gpio_get_level(GPIO_HANDSHAKE) != 1) {
+        vTaskDelay(1);
+    }
+    ret = spi_device_transmit(handle, &t);
+    printf("Received: %hhn\n", recvbuf);
+
     do {
         //tell the slave to get in image download mode
-        printf("Telling slave to setup for ota\n");
-
-        t.length = BUF_SIZE * 8;
-        binary_file_length = 0;
+        printf("-------Telling slave to setup for ota: CMD 128------\n");
 
         //cmd to start ota
         sendbuf[0] = 128;
-
-        //setup buffers
-        t.tx_buffer = sendbuf;
-        t.rx_buffer = recvbuf;
 
         //Wait for slave to be ready for next byte before sending
         printf("Now waiting for slave\n");
@@ -252,52 +292,117 @@ void app_main(void)
         printf("Received: %hhn\n", recvbuf);
 
     } while (recvbuf[0] == 0);
+
     
 
     //try and open the file
     printf("Opening file..... \n");
-    FILE* file = open_file();
+    FILE* file = NULL;
 
+    open_file(&file);
+/*
+    //tell the slave how big a file is coming
+    printf("-------Telling slave ota file size: CMD 131------\n");
+ 
+
+    //Wait for slave to be ready for next byte before sending
+    printf("Now waiting for slave\n");
+    //xSemaphoreTake(rdySem, portMAX_DELAY); //Wait until slave is ready
+    while(gpio_get_level(GPIO_HANDSHAKE) != 1) {
+        vTaskDelay(1);
+    }
+    ret = spi_device_transmit(handle, &t);
+    //printf("Received: %hhn\n", recvbuf);
+*/
+    int err = 0;
     //this section grabs the next chunk of the file and sends it to the slave
     //until the end of file is reached or error
-    while (1) {
+    while (
+    #ifdef PART_FILE
+    n < PART_FILE_NUM
+    #else
+    1
+    #endif 
+    ) {
         printf("-------Entering reading a new chunk: CMD 129------\n");
         
         //read buffer call
-        if (read_file_chunk(file, sendbuf) != 0 ){
-            printf("error reading chunk\n");
-            break;
-            //need more error handling here
-        }
+        uint16_t read_bytes = read_file_chunk(file, sendbuf, DATA_SIZE);
 
-        //setup buffers
-        t.length = BUF_SIZE * 8;
-        t.tx_buffer = sendbuf;
-        t.rx_buffer = recvbuf;
-        
-        //Wait for slave to be ready for next byte before sending
-        printf("Now waiting for slave\n");
-        //xSemaphoreTake(rdySem, portMAX_DELAY); //Wait until slave is ready
-        while(gpio_get_level(GPIO_HANDSHAKE) != 1) {
-            vTaskDelay(1);
+        if ( read_bytes > 0 ){
+            printf("Chunk of file: %d\n", n);
+
+            #ifdef DEBUG_FREAD_SIZE
+            printf("Full Size: %02X\n", read_bytes);
+            printf("First Size byte: %02X\n", sendbuf[1]);
+            printf("Last Size byte: %02X\n", sendbuf[2]);
+            #endif
+
+            //setup buffers
+            t.length = TRANS_SIZE * 8;
+            t.tx_buffer = sendbuf;
+            t.rx_buffer = recvbuf;
+
+            #ifdef DEBUG_SENDBUFFER
+            for (int i = 0; i < read_bytes; i++) {
+                printf("%d byte: %02X\n", i, sendbuf[i]);
+            }
+            #endif
+             
+            vTaskDelay(10);
+
+            //Wait for slave to be ready for next byte before sending
+            printf("Now waiting for slave\n");
+            //xSemaphoreTake(rdySem, portMAX_DELAY); //Wait until slave is ready
+            while(gpio_get_level(GPIO_HANDSHAKE) != 1) {
+                vTaskDelay(10);
+            }
+
+            ret = spi_device_transmit(handle, &t);
+
+            vTaskDelay(10);
+
+            n++;
+            if (read_bytes < DATA_SIZE) {
+                printf("End of file reached, last chunk comming of bytes: %d\n", read_bytes);
+
+                #ifdef DEBUG_SENDBUFFER_LAST
+                for (int i = 900; i < TRANS_SIZE; i++) {
+                    printf("%d byte: %02X\n", i, sendbuf[i]);
+                }
+                #endif
+
+                //EOF reached
+                printf("EOF!\n");
+                break;
+            }
+            //otherwise, keep looping
+            continue;
+
+        } else if ( err != 0 ) {
+            printf("Error reading\n");
+            break;
+        } else {
+            printf("File is done, this is awkward\n");
+            break;
         }
-        ret = spi_device_transmit(handle, &t);
-        printf("Sent the %d chunk of file\n", n);
-        //printf("Received: %s\n", recvbuf);
-        n++;
     }
     
-    printf("Closing file..... \n");
-    close_file(file);
-
-
     //now tell slave its at the end of the file
-    printf("Telling slave EOF\n");
-
-    t.length = BUF_SIZE * 8;
-
+    printf("-------Telling slave EOF: CMD 130------\n");
     //cmd to end ota
     sendbuf[0] = 130;
+    sendbuf[1] = 0;
+    sendbuf[2] = 0;
+    //sendbuf[1] = final_chunk_size; //how many bits need to be written to OTA
+
+    //file sendbuf with file chunk after CMD+1
+    //read_file_chunk(file, sendbuf+1, final_chunk_size);
+
+   // binary_file_length += final_chunk_size;
+
+
+    t.length = TRANS_SIZE * 8;
 
     //setup buffers
     t.tx_buffer = sendbuf;
@@ -311,12 +416,18 @@ void app_main(void)
     }
 
     ret = spi_device_transmit(handle, &t);
-    printf("Total file size: %d\n", binary_file_length);
+    printf("Measured file size: %d\n", binary_file_length);
+    printf("Actual file size: %ld\n", file_size);
 
-//-----------------------ADDED------------------------//
+    //close file
+    printf("Closing file..... \n");
+    close_file(file);
 
-    ret = spi_bus_remove_device(handle);
-    assert(ret == ESP_OK);
+    //ret = spi_bus_remove_device(handle);
+    //assert(ret == ESP_OK);
 
     //esp_restart();
+
+    //ret = spi_bus_remove_device(handle);
+    //assert(ret == ESP_OK);
 }

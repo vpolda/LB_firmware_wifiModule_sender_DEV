@@ -1,0 +1,1236 @@
+[0;32mI (18) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Jun  2 2025 15:53:48[0m
+[0;32mI (18) boot: chip revision: v0.1[0m
+[0;32mI (19) boot: efuse block revision: v0.3[0m
+[0;32mI (21) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (29) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (33) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (40) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (46) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (53) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (59) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (66) boot:  3 storage          Unknown data     01 82 00110000 00180000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0b1c0h ( 45504) map[0m
+[0;32mI (92) esp_image: segment 1: paddr=0001b1e8 vaddr=40800000 size=04e30h ( 20016) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1d1b8h (119224) map[0m
+[0;32mI (120) esp_image: segment 3: paddr=0003d1e0 vaddr=40804e30 size=087b8h ( 34744) load[0m
+[0;32mI (128) esp_image: segment 4: paddr=000459a0 vaddr=4080d5f0 size=018f0h (  6384) load[0m
+[0;32mI (133) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (133) boot: Disabling RNG early entropy source...[0m
+[0;32mI (145) cpu_start: Unicore app[0m
+[0;32mI (154) cpu_start: Pro cpu start user code[0m
+[0;32mI (154) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (154) app_init: Application information:[0m
+[0;32mI (155) app_init: Project name:     spi_slave_sender[0m
+[0;32mI (159) app_init: App version:      fbd857a-dirty[0m
+[0;32mI (163) app_init: Compile time:     Jun  3 2025 09:39:44[0m
+[0;32mI (168) app_init: ELF file SHA256:  6d461175d...[0m
+[0;32mI (173) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (176) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (180) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (184) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (188) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (194) heap_init: At 4080FE60 len 0006C7B0 (433 KiB): RAM[0m
+[0;32mI (200) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (205) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (211) spi_flash: detected chip: generic[0m
+[0;32mI (214) spi_flash: flash io: dio[0m
+[0;33mW (217) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (235) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (242) coexist: coex firmware version: e727207[0m
+[0;32mI (260) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (261) main_task: Started on CPU0[0m
+[0;32mI (261) main_task: Calling app_main()[0m
+Entering app_main()
+[0;32mI (261) spiMaster: Initializing SPIFFS[0m
+[0;32mI (311) spiMaster: Partition size: total: 1438481, used: 153612[0m
+[0;32mI (311) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+-------Telling slave to setup for ota: CMD 128------
+Now waiting for slave
+Received: 
+-------Telling slave to setup for ota: CMD 128------
+Now waiting for slave
+Received: 
+Opening file..... 
+[0;32mI (63031) spiMaster: Reading file[0m
+Opened file of size: 152096
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 0
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63061) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 1
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63081) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 2
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63101) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 3
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63131) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 4
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63151) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 5
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63171) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 6
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63191) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 7
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63211) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 8
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63231) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 9
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63251) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 10
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63271) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 11
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63291) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 12
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63311) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 13
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63331) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 14
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63361) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 15
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63381) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 16
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63401) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 17
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63421) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 18
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63441) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 19
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63461) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 20
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63481) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 21
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63501) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 22
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63521) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 23
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63541) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 24
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63561) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 25
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63591) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 26
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63611) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 27
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63631) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 28
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63651) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 29
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63671) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 30
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63691) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 31
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63711) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 32
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63731) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 33
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63751) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 34
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63771) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 35
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63791) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 36
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63821) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 37
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63841) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 38
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63861) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 39
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63881) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 40
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63901) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 41
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63921) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 42
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63941) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 43
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63961) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 44
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (63981) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 45
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64001) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 46
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64021) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 47
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64051) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 48
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64071) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 49
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64091) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 50
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64111) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 51
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64131) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 52
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64151) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 53
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64171) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 54
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64191) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 55
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64211) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 56
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64231) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 57
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64251) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 58
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64281) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 59
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64301) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 60
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64321) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 61
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64341) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 62
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64361) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 63
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64381) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 64
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64401) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 65
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64421) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 66
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64441) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 67
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64461) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 68
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64481) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 69
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64511) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 70
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64531) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 71
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64551) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 72
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64571) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 73
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64591) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 74
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64611) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 75
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64631) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 76
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64651) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 77
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64671) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 78
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64691) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 79
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64711) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 80
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64741) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 81
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64761) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 82
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64781) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 83
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64801) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 84
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64821) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 85
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64841) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 86
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64861) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 87
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64881) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 88
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64901) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 89
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64921) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 90
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64941) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 91
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64971) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 92
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (64991) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 93
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65011) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 94
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65031) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 95
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65051) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 96
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65071) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 97
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65091) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 98
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65111) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 99
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65131) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 100
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65151) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 101
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65181) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 102
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65201) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 103
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65221) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 104
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65241) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 105
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65261) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 106
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65281) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 107
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65301) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 108
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65321) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 109
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65341) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 110
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65361) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 111
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65391) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 112
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65411) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 113
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65431) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 114
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65451) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 115
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65471) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 116
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65491) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 117
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65511) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 118
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65531) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 119
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65551) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 120
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65571) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 121
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65601) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 122
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65621) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 123
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65641) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 124
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65661) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 125
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65681) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 126
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65701) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 127
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65721) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 128
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65741) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 129
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65761) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 130
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65781) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 131
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65811) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 132
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65831) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 133
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65851) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 134
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65871) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 135
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65891) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 136
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65911) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 137
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65931) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 138
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65951) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 139
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65971) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 140
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (65991) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 141
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (66021) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 142
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (66041) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 143
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (66061) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 144
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (66081) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 145
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (66101) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 146
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (66121) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+Chunk of file: 147
+Full Size: 3FD
+First Size byte: 03
+Last Size byte: FD
+Now waiting for slave
+[1;31mE (66141) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+-------Entering reading a new chunk: CMD 129------
+EOF reached winthin bounds
+Chunk of file: 148
+Full Size: 3DC
+First Size byte: 03
+Last Size byte: DC
+Now waiting for slave
+[1;31mE (66161) spi_master: check_trans_valid(1055): rx length > tx length in full duplex mode[0m
+End of file reached, last chunk comming of bytes: 988
+900 byte: 9D
+901 byte: 80
+902 byte: 40
+903 byte: 0A
+904 byte: A4
+905 byte: 80
+906 byte: 40
+907 byte: EC
+908 byte: A1
+909 byte: 80
+910 byte: 40
+911 byte: 50
+912 byte: A4
+913 byte: 80
+914 byte: 40
+915 byte: 94
+916 byte: A0
+917 byte: 80
+918 byte: 40
+919 byte: 46
+920 byte: 9E
+921 byte: 80
+922 byte: 40
+923 byte: 67
+924 byte: 65
+925 byte: 6E
+926 byte: 65
+927 byte: 72
+928 byte: 69
+929 byte: 63
+930 byte: 00
+931 byte: 63
+932 byte: 68
+933 byte: 69
+934 byte: 70
+935 byte: 5F
+936 byte: 67
+937 byte: 65
+938 byte: 6E
+939 byte: 65
+940 byte: 72
+941 byte: 69
+942 byte: 63
+943 byte: 00
+944 byte: 00
+945 byte: 00
+946 byte: 00
+947 byte: 00
+948 byte: 00
+949 byte: 00
+950 byte: 00
+951 byte: 00
+952 byte: 00
+953 byte: 00
+954 byte: 00
+955 byte: 00
+956 byte: 00
+957 byte: 00
+958 byte: F9
+959 byte: 15
+960 byte: 4E
+961 byte: C3
+962 byte: 37
+963 byte: A1
+964 byte: FA
+965 byte: 05
+966 byte: A0
+967 byte: 61
+968 byte: 9A
+969 byte: 7D
+970 byte: 58
+971 byte: 4B
+972 byte: 82
+973 byte: 07
+974 byte: 1F
+975 byte: FA
+976 byte: FF
+977 byte: CA
+978 byte: 46
+979 byte: A3
+980 byte: 66
+981 byte: D2
+982 byte: 7F
+983 byte: 38
+984 byte: 47
+985 byte: 2E
+986 byte: A2
+987 byte: DD
+988 byte: 30
+989 byte: 93
+990 byte: B3
+991 byte: 00
+992 byte: 00
+993 byte: 00
+994 byte: 00
+995 byte: 00
+996 byte: 00
+997 byte: 00
+998 byte: 00
+999 byte: 00
+1000 byte: 00
+1001 byte: 00
+1002 byte: 00
+1003 byte: 00
+1004 byte: 00
+1005 byte: 00
+1006 byte: 00
+1007 byte: 00
+1008 byte: 00
+1009 byte: 00
+1010 byte: 00
+1011 byte: 00
+1012 byte: 00
+1013 byte: 00
+1014 byte: 00
+1015 byte: 00
+1016 byte: 00
+1017 byte: 00
+1018 byte: 00
+1019 byte: 00
+1020 byte: 00
+1021 byte: 65
+1022 byte: 6E
+1023 byte: 2C
+EOF!
+-------Telling slave EOF: CMD 130------
+Now waiting for slave
+Measured file size: 152096
+Actual file size: 152096
+Closing file..... 
+[0;32mI (66341) main_task: Returned from app_main()[0m

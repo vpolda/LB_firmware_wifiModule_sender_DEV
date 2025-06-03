@@ -8,7 +8,22 @@
     "string": "c",
     "format": "c",
     "cstdio": "c",
-    "esp_system.h": "c"
+    "esp_system.h": "c",
+    "charconv": "c",
+    "chrono": "c",
+    "optional": "c",
+    "ratio": "c",
+    "system_error": "c",
+    "array": "c",
+    "functional": "c",
+    "regex": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "utility": "c",
+    "bitset": "c",
+    "string_view": "c",
+    "initializer_list": "c",
+    "span": "c"
   },
   "idf.flashType": "UART"
 }

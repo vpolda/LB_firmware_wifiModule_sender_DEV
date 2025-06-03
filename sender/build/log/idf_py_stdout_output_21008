@@ -1,0 +1,1502 @@
+[0;32mI (18) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Jun  2 2025 15:53:48[0m
+[0;32mI (18) boot: chip revision: v0.1[0m
+[0;32mI (19) boot: efuse block revision: v0.3[0m
+[0;32mI (21) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (29) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (33) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (40) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (46) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (53) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (59) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (66) boot:  3 storage          Unknown data     01 82 00110000 00180000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0b340h ( 45888) map[0m
+[0;32mI (92) esp_image: segment 1: paddr=0001b368 vaddr=40800000 size=04cb0h ( 19632) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1d5e0h (120288) map[0m
+[0;32mI (120) esp_image: segment 3: paddr=0003d608 vaddr=40804cb0 size=0897ch ( 35196) load[0m
+[0;32mI (128) esp_image: segment 4: paddr=00045f8c vaddr=4080d630 size=018f0h (  6384) load[0m
+[0;32mI (133) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (146) cpu_start: Unicore app[0m
+[0;32mI (154) cpu_start: Pro cpu start user code[0m
+[0;32mI (154) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (155) app_init: Application information:[0m
+[0;32mI (155) app_init: Project name:     spi_slave_sender[0m
+[0;32mI (159) app_init: App version:      fbd857a-dirty[0m
+[0;32mI (164) app_init: Compile time:     Jun  3 2025 09:39:44[0m
+[0;32mI (169) app_init: ELF file SHA256:  69333c1e5...[0m
+[0;32mI (173) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (177) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (181) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (185) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (188) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (195) heap_init: At 4080FEA0 len 0006C770 (433 KiB): RAM[0m
+[0;32mI (200) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (205) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (211) spi_flash: detected chip: generic[0m
+[0;32mI (214) spi_flash: flash io: dio[0m
+[0;33mW (217) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (236) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (242) coexist: coex firmware version: e727207[0m
+[0;32mI (261) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (261) main_task: Started on CPU0[0m
+[0;32mI (261) main_task: Calling app_main()[0m
+Entering app_main()
+[0;32mI (261) spiMaster: Initializing SPIFFS[0m
+[0;32mI (311) spiMaster: Partition size: total: 1438481, used: 153612[0m
+[0;32mI (311) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+-------Telling slave to setup for ota: CMD 128------
+Now waiting for slave
+Received: 
+-------Telling slave to setup for ota: CMD 128------
+Now waiting for slave
+Received: 
+Opening file..... 
+[0;32mI (11531) spiMaster: Reading file[0m
+Opened file of size: 152096
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+Now waiting for slave
+-------Entering reading a new chunk: CMD 129------
+EOF reached winthin bounds
+End of file reached, last chunk comming: 988
+Now waiting for slave
+Last chunk of sendbuf: 148
+0 byte: 81
+1 byte: 03
+2 byte: DC
+3 byte: 00
+4 byte: 00
+5 byte: 00
+6 byte: 00
+7 byte: 00
+8 byte: 00
+9 byte: 00
+10 byte: 00
+11 byte: 00
+12 byte: 00
+13 byte: 00
+14 byte: 00
+15 byte: 00
+16 byte: 00
+17 byte: 00
+18 byte: 00
+19 byte: 00
+20 byte: 00
+21 byte: 00
+22 byte: 00
+23 byte: 00
+24 byte: 00
+25 byte: 00
+26 byte: 00
+27 byte: 00
+28 byte: 00
+29 byte: 00
+30 byte: 00
+31 byte: 00
+32 byte: 00
+33 byte: 00
+34 byte: 00
+35 byte: 00
+36 byte: 00
+37 byte: 00
+38 byte: 00
+39 byte: 00
+40 byte: 00
+41 byte: 00
+42 byte: 00
+43 byte: 00
+44 byte: 00
+45 byte: 00
+46 byte: 00
+47 byte: 00
+48 byte: 00
+49 byte: 00
+50 byte: 00
+51 byte: 00
+52 byte: 00
+53 byte: 00
+54 byte: 00
+55 byte: 00
+56 byte: 00
+57 byte: 00
+58 byte: 00
+59 byte: 00
+60 byte: 00
+61 byte: 00
+62 byte: 00
+63 byte: 00
+64 byte: 00
+65 byte: 00
+66 byte: 00
+67 byte: 00
+68 byte: 00
+69 byte: 00
+70 byte: 00
+71 byte: 00
+72 byte: 00
+73 byte: 00
+74 byte: 00
+75 byte: 00
+76 byte: 00
+77 byte: 00
+78 byte: 00
+79 byte: 00
+80 byte: 00
+81 byte: 00
+82 byte: 00
+83 byte: 00
+84 byte: 00
+85 byte: 00
+86 byte: 00
+87 byte: 00
+88 byte: 00
+89 byte: 00
+90 byte: 00
+91 byte: 00
+92 byte: 00
+93 byte: 00
+94 byte: 00
+95 byte: 00
+96 byte: 00
+97 byte: 00
+98 byte: 00
+99 byte: 00
+100 byte: 00
+101 byte: 00
+102 byte: 00
+103 byte: 00
+104 byte: 00
+105 byte: 00
+106 byte: 00
+107 byte: 00
+108 byte: 00
+109 byte: 00
+110 byte: 00
+111 byte: 00
+112 byte: 00
+113 byte: 00
+114 byte: 00
+115 byte: 00
+116 byte: 00
+117 byte: 00
+118 byte: 00
+119 byte: 00
+120 byte: 00
+121 byte: 00
+122 byte: 00
+123 byte: 00
+124 byte: 00
+125 byte: 00
+126 byte: 00
+127 byte: 00
+128 byte: 00
+129 byte: 00
+130 byte: 00
+131 byte: 00
+132 byte: 00
+133 byte: 00
+134 byte: 00
+135 byte: 00
+136 byte: 00
+137 byte: 00
+138 byte: 00
+139 byte: 00
+140 byte: 00
+141 byte: 00
+142 byte: 00
+143 byte: 00
+144 byte: 00
+145 byte: 00
+146 byte: 00
+147 byte: 00
+148 byte: 00
+149 byte: 00
+150 byte: 00
+151 byte: 00
+152 byte: 00
+153 byte: 00
+154 byte: 00
+155 byte: 00
+156 byte: 00
+157 byte: 00
+158 byte: 00
+159 byte: 00
+160 byte: 00
+161 byte: 00
+162 byte: 00
+163 byte: 00
+164 byte: 00
+165 byte: 00
+166 byte: 00
+167 byte: 00
+168 byte: 00
+169 byte: 00
+170 byte: 00
+171 byte: 00
+172 byte: 00
+173 byte: 00
+174 byte: 00
+175 byte: 00
+176 byte: 00
+177 byte: 00
+178 byte: 00
+179 byte: 00
+180 byte: 00
+181 byte: 00
+182 byte: 00
+183 byte: 00
+184 byte: 00
+185 byte: 00
+186 byte: 00
+187 byte: 00
+188 byte: 00
+189 byte: 00
+190 byte: 00
+191 byte: 00
+192 byte: 00
+193 byte: 00
+194 byte: 00
+195 byte: 00
+196 byte: 00
+197 byte: 00
+198 byte: 00
+199 byte: 00
+200 byte: 00
+201 byte: 00
+202 byte: 00
+203 byte: 00
+204 byte: 00
+205 byte: 00
+206 byte: 00
+207 byte: 00
+208 byte: 00
+209 byte: 00
+210 byte: 00
+211 byte: 00
+212 byte: 00
+213 byte: 00
+214 byte: 00
+215 byte: 00
+216 byte: 00
+217 byte: 00
+218 byte: 00
+219 byte: 00
+220 byte: 00
+221 byte: 00
+222 byte: 00
+223 byte: 00
+224 byte: 00
+225 byte: 00
+226 byte: 00
+227 byte: 00
+228 byte: 00
+229 byte: 00
+230 byte: 00
+231 byte: 00
+232 byte: 00
+233 byte: 00
+234 byte: 00
+235 byte: 00
+236 byte: 00
+237 byte: 00
+238 byte: 00
+239 byte: 00
+240 byte: 00
+241 byte: 00
+242 byte: 00
+243 byte: 00
+244 byte: 00
+245 byte: 00
+246 byte: 00
+247 byte: 00
+248 byte: 00
+249 byte: 00
+250 byte: 00
+251 byte: 00
+252 byte: 00
+253 byte: 00
+254 byte: 00
+255 byte: 00
+256 byte: 00
+257 byte: 00
+258 byte: 00
+259 byte: 00
+260 byte: 00
+261 byte: 00
+262 byte: 00
+263 byte: 00
+264 byte: 00
+265 byte: 00
+266 byte: 00
+267 byte: 00
+268 byte: 00
+269 byte: 00
+270 byte: 00
+271 byte: 00
+272 byte: 00
+273 byte: 00
+274 byte: 00
+275 byte: 00
+276 byte: 00
+277 byte: 00
+278 byte: 00
+279 byte: 00
+280 byte: 00
+281 byte: 00
+282 byte: 00
+283 byte: 00
+284 byte: 00
+285 byte: 00
+286 byte: 00
+287 byte: 00
+288 byte: 00
+289 byte: 00
+290 byte: 00
+291 byte: 00
+292 byte: 00
+293 byte: 00
+294 byte: 00
+295 byte: 00
+296 byte: 00
+297 byte: 00
+298 byte: 00
+299 byte: 00
+300 byte: 00
+301 byte: 00
+302 byte: 00
+303 byte: 00
+304 byte: 00
+305 byte: 00
+306 byte: 00
+307 byte: 00
+308 byte: 00
+309 byte: 00
+310 byte: 00
+311 byte: 00
+312 byte: 00
+313 byte: 00
+314 byte: 00
+315 byte: 00
+316 byte: 00
+317 byte: 00
+318 byte: 00
+319 byte: 00
+320 byte: 00
+321 byte: 00
+322 byte: 00
+323 byte: 00
+324 byte: 00
+325 byte: 00
+326 byte: 00
+327 byte: 00
+328 byte: 00
+329 byte: 00
+330 byte: 00
+331 byte: 00
+332 byte: 00
+333 byte: 00
+334 byte: 00
+335 byte: 00
+336 byte: 00
+337 byte: 00
+338 byte: 00
+339 byte: 00
+340 byte: 00
+341 byte: 00
+342 byte: 00
+343 byte: 00
+344 byte: 00
+345 byte: 00
+346 byte: 00
+347 byte: 00
+348 byte: 00
+349 byte: 00
+350 byte: 00
+351 byte: 00
+352 byte: 00
+353 byte: 00
+354 byte: 00
+355 byte: 00
+356 byte: 00
+357 byte: 00
+358 byte: 00
+359 byte: 00
+360 byte: 00
+361 byte: 00
+362 byte: 00
+363 byte: 00
+364 byte: 00
+365 byte: 00
+366 byte: 00
+367 byte: 00
+368 byte: 00
+369 byte: 00
+370 byte: 00
+371 byte: 00
+372 byte: 00
+373 byte: 00
+374 byte: 00
+375 byte: 00
+376 byte: 00
+377 byte: 00
+378 byte: 00
+379 byte: 00
+380 byte: 00
+381 byte: 00
+382 byte: 00
+383 byte: 00
+384 byte: 00
+385 byte: 00
+386 byte: 00
+387 byte: 00
+388 byte: 00
+389 byte: 00
+390 byte: 00
+391 byte: 00
+392 byte: 00
+393 byte: 00
+394 byte: 00
+395 byte: 00
+396 byte: 00
+397 byte: 00
+398 byte: 00
+399 byte: 00
+400 byte: 00
+401 byte: 00
+402 byte: 00
+403 byte: 00
+404 byte: 00
+405 byte: 00
+406 byte: 00
+407 byte: 00
+408 byte: 00
+409 byte: 00
+410 byte: 00
+411 byte: 00
+412 byte: 00
+413 byte: 00
+414 byte: 00
+415 byte: 00
+416 byte: 00
+417 byte: 00
+418 byte: 00
+419 byte: 00
+420 byte: 00
+421 byte: 00
+422 byte: 00
+423 byte: 00
+424 byte: 00
+425 byte: 00
+426 byte: 00
+427 byte: 00
+428 byte: 00
+429 byte: 00
+430 byte: 00
+431 byte: 00
+432 byte: 00
+433 byte: 00
+434 byte: 00
+435 byte: 00
+436 byte: 00
+437 byte: 00
+438 byte: 00
+439 byte: 00
+440 byte: 00
+441 byte: 00
+442 byte: 00
+443 byte: 00
+444 byte: 00
+445 byte: 00
+446 byte: 00
+447 byte: 00
+448 byte: 00
+449 byte: 00
+450 byte: 00
+451 byte: 00
+452 byte: 00
+453 byte: 00
+454 byte: 00
+455 byte: 00
+456 byte: 00
+457 byte: 00
+458 byte: 00
+459 byte: 00
+460 byte: 00
+461 byte: 00
+462 byte: 00
+463 byte: 00
+464 byte: 00
+465 byte: 00
+466 byte: 00
+467 byte: 00
+468 byte: 00
+469 byte: 00
+470 byte: 00
+471 byte: 00
+472 byte: 00
+473 byte: 00
+474 byte: 00
+475 byte: 00
+476 byte: 00
+477 byte: 00
+478 byte: 00
+479 byte: 00
+480 byte: 00
+481 byte: 00
+482 byte: 00
+483 byte: 00
+484 byte: 00
+485 byte: 00
+486 byte: 00
+487 byte: 00
+488 byte: 00
+489 byte: 00
+490 byte: 00
+491 byte: 00
+492 byte: 00
+493 byte: 00
+494 byte: 00
+495 byte: 00
+496 byte: 00
+497 byte: 00
+498 byte: 00
+499 byte: 00
+500 byte: 00
+501 byte: 00
+502 byte: 00
+503 byte: 00
+504 byte: 00
+505 byte: 00
+506 byte: 00
+507 byte: 00
+508 byte: 00
+509 byte: 00
+510 byte: 00
+511 byte: 00
+512 byte: 00
+513 byte: 00
+514 byte: 00
+515 byte: 00
+516 byte: 00
+517 byte: 00
+518 byte: 00
+519 byte: 00
+520 byte: 00
+521 byte: 00
+522 byte: 00
+523 byte: 00
+524 byte: 00
+525 byte: 00
+526 byte: 00
+527 byte: 00
+528 byte: 00
+529 byte: 00
+530 byte: 00
+531 byte: 00
+532 byte: 00
+533 byte: 00
+534 byte: 00
+535 byte: 00
+536 byte: 00
+537 byte: 00
+538 byte: 00
+539 byte: 00
+540 byte: 00
+541 byte: 00
+542 byte: 00
+543 byte: 00
+544 byte: 00
+545 byte: 00
+546 byte: 00
+547 byte: 00
+548 byte: 00
+549 byte: 00
+550 byte: 00
+551 byte: 00
+552 byte: 00
+553 byte: 00
+554 byte: 00
+555 byte: 00
+556 byte: 00
+557 byte: 00
+558 byte: 00
+559 byte: 00
+560 byte: 00
+561 byte: 00
+562 byte: 00
+563 byte: 00
+564 byte: 00
+565 byte: 00
+566 byte: 00
+567 byte: 00
+568 byte: 00
+569 byte: 00
+570 byte: 00
+571 byte: 00
+572 byte: 00
+573 byte: 00
+574 byte: 00
+575 byte: 00
+576 byte: 00
+577 byte: 00
+578 byte: 00
+579 byte: 00
+580 byte: 00
+581 byte: 00
+582 byte: 00
+583 byte: 00
+584 byte: 00
+585 byte: 00
+586 byte: 00
+587 byte: 00
+588 byte: 00
+589 byte: 00
+590 byte: 00
+591 byte: 00
+592 byte: 00
+593 byte: 00
+594 byte: 00
+595 byte: 00
+596 byte: 00
+597 byte: 00
+598 byte: 00
+599 byte: 00
+600 byte: 00
+601 byte: 00
+602 byte: 00
+603 byte: 00
+604 byte: 00
+605 byte: 00
+606 byte: 00
+607 byte: 00
+608 byte: 00
+609 byte: 00
+610 byte: 00
+611 byte: 00
+612 byte: 00
+613 byte: 00
+614 byte: 00
+615 byte: 00
+616 byte: 00
+617 byte: 00
+618 byte: 00
+619 byte: 00
+620 byte: 00
+621 byte: 00
+622 byte: 00
+623 byte: 00
+624 byte: 00
+625 byte: 00
+626 byte: 00
+627 byte: 00
+628 byte: 00
+629 byte: 00
+630 byte: 00
+631 byte: 00
+632 byte: 00
+633 byte: 00
+634 byte: 00
+635 byte: 00
+636 byte: 00
+637 byte: 00
+638 byte: 00
+639 byte: 00
+640 byte: 00
+641 byte: 00
+642 byte: 00
+643 byte: 00
+644 byte: 00
+645 byte: 00
+646 byte: 00
+647 byte: 00
+648 byte: 00
+649 byte: 00
+650 byte: 00
+651 byte: 00
+652 byte: 00
+653 byte: 00
+654 byte: 00
+655 byte: 00
+656 byte: 00
+657 byte: 00
+658 byte: 00
+659 byte: 00
+660 byte: 00
+661 byte: 00
+662 byte: 00
+663 byte: 00
+664 byte: 00
+665 byte: 00
+666 byte: 00
+667 byte: 00
+668 byte: 00
+669 byte: 00
+670 byte: 00
+671 byte: 00
+672 byte: 00
+673 byte: 00
+674 byte: 00
+675 byte: 00
+676 byte: 00
+677 byte: 00
+678 byte: 00
+679 byte: 00
+680 byte: 00
+681 byte: 00
+682 byte: 00
+683 byte: 00
+684 byte: 00
+685 byte: 00
+686 byte: 00
+687 byte: 00
+688 byte: 00
+689 byte: 00
+690 byte: 00
+691 byte: 00
+692 byte: 00
+693 byte: 00
+694 byte: 00
+695 byte: 00
+696 byte: 00
+697 byte: 00
+698 byte: 00
+699 byte: 00
+700 byte: 00
+701 byte: 00
+702 byte: 00
+703 byte: 00
+704 byte: 00
+705 byte: 00
+706 byte: 00
+707 byte: 00
+708 byte: 00
+709 byte: 00
+710 byte: 00
+711 byte: 00
+712 byte: 00
+713 byte: 00
+714 byte: 00
+715 byte: 00
+716 byte: 00
+717 byte: 00
+718 byte: 00
+719 byte: 00
+720 byte: 00
+721 byte: 00
+722 byte: 00
+723 byte: 00
+724 byte: 00
+725 byte: 00
+726 byte: 00
+727 byte: 00
+728 byte: 00
+729 byte: 00
+730 byte: 00
+731 byte: 00
+732 byte: 00
+733 byte: 00
+734 byte: 00
+735 byte: 00
+736 byte: 00
+737 byte: 00
+738 byte: 00
+739 byte: 00
+740 byte: 00
+741 byte: 00
+742 byte: 00
+743 byte: 00
+744 byte: 00
+745 byte: 00
+746 byte: 00
+747 byte: 00
+748 byte: 00
+749 byte: 00
+750 byte: 00
+751 byte: 00
+752 byte: 00
+753 byte: 00
+754 byte: 00
+755 byte: 00
+756 byte: 00
+757 byte: 00
+758 byte: 00
+759 byte: 00
+760 byte: 00
+761 byte: 00
+762 byte: 00
+763 byte: 00
+764 byte: 00
+765 byte: 00
+766 byte: 00
+767 byte: 00
+768 byte: 00
+769 byte: 00
+770 byte: 00
+771 byte: 00
+772 byte: 00
+773 byte: 00
+774 byte: 00
+775 byte: 00
+776 byte: 00
+777 byte: 00
+778 byte: 00
+779 byte: 00
+780 byte: 00
+781 byte: 00
+782 byte: 00
+783 byte: 00
+784 byte: 00
+785 byte: 00
+786 byte: 00
+787 byte: 00
+788 byte: 00
+789 byte: 00
+790 byte: 00
+791 byte: 00
+792 byte: 00
+793 byte: 00
+794 byte: 00
+795 byte: 00
+796 byte: 00
+797 byte: 00
+798 byte: 00
+799 byte: 00
+800 byte: 00
+801 byte: 00
+802 byte: 00
+803 byte: 00
+804 byte: 00
+805 byte: 00
+806 byte: 00
+807 byte: 00
+808 byte: 00
+809 byte: 00
+810 byte: 00
+811 byte: 00
+812 byte: 00
+813 byte: 00
+814 byte: 00
+815 byte: 00
+816 byte: 00
+817 byte: 00
+818 byte: 00
+819 byte: 00
+820 byte: 00
+821 byte: 00
+822 byte: 00
+823 byte: 00
+824 byte: 00
+825 byte: 00
+826 byte: 00
+827 byte: 00
+828 byte: 00
+829 byte: 00
+830 byte: 00
+831 byte: 00
+832 byte: 00
+833 byte: 00
+834 byte: 00
+835 byte: 00
+836 byte: 00
+837 byte: 00
+838 byte: 00
+839 byte: 00
+840 byte: 00
+841 byte: 00
+842 byte: 00
+843 byte: 00
+844 byte: 00
+845 byte: 00
+846 byte: 00
+847 byte: 00
+848 byte: 00
+849 byte: 00
+850 byte: 00
+851 byte: 00
+852 byte: 00
+853 byte: 00
+854 byte: 00
+855 byte: 00
+856 byte: 00
+857 byte: 00
+858 byte: 00
+859 byte: 00
+860 byte: 00
+861 byte: 00
+862 byte: 00
+863 byte: 00
+864 byte: 00
+865 byte: 00
+866 byte: 00
+867 byte: 00
+868 byte: 00
+869 byte: 00
+870 byte: 00
+871 byte: 00
+872 byte: 00
+873 byte: 00
+874 byte: 00
+875 byte: 00
+876 byte: 00
+877 byte: 00
+878 byte: 00
+879 byte: 00
+880 byte: 00
+881 byte: 00
+882 byte: 00
+883 byte: 00
+884 byte: 00
+885 byte: 00
+886 byte: 00
+887 byte: 00
+888 byte: 00
+889 byte: 00
+890 byte: 00
+891 byte: 00
+892 byte: 00
+893 byte: 00
+894 byte: 00
+895 byte: 00
+896 byte: 00
+897 byte: 00
+898 byte: 00
+899 byte: 00
+900 byte: 00
+901 byte: 00
+902 byte: 00
+903 byte: 00
+904 byte: 00
+905 byte: 00
+906 byte: 00
+907 byte: 00
+908 byte: 00
+909 byte: 00
+910 byte: 00
+911 byte: 00
+912 byte: 00
+913 byte: 00
+914 byte: 00
+915 byte: 00
+916 byte: 00
+917 byte: 00
+918 byte: 00
+919 byte: 00
+920 byte: 00
+921 byte: 00
+922 byte: 00
+923 byte: 00
+924 byte: 00
+925 byte: 00
+926 byte: 00
+927 byte: 00
+928 byte: 00
+929 byte: 00
+930 byte: 00
+931 byte: 00
+932 byte: 00
+933 byte: 00
+934 byte: 00
+935 byte: 00
+936 byte: 00
+937 byte: 00
+938 byte: 00
+939 byte: 00
+940 byte: 00
+941 byte: 00
+942 byte: 00
+943 byte: 00
+944 byte: 00
+945 byte: 00
+946 byte: 00
+947 byte: 00
+948 byte: 00
+949 byte: 00
+950 byte: 00
+951 byte: 00
+952 byte: 00
+953 byte: 00
+954 byte: 00
+955 byte: 00
+956 byte: 00
+957 byte: 00
+958 byte: 00
+959 byte: 00
+960 byte: 00
+961 byte: 00
+962 byte: 00
+963 byte: 00
+964 byte: 00
+965 byte: 00
+966 byte: 00
+967 byte: 00
+968 byte: 00
+969 byte: 00
+970 byte: 00
+971 byte: 00
+972 byte: 00
+973 byte: 00
+974 byte: 00
+975 byte: 00
+976 byte: 00
+977 byte: 00
+978 byte: 00
+979 byte: 00
+980 byte: 00
+981 byte: 00
+982 byte: 00
+983 byte: 00
+984 byte: 00
+985 byte: 00
+986 byte: 00
+987 byte: 00
+988 byte: 00
+989 byte: 00
+990 byte: 00
+991 byte: 00
+992 byte: 00
+993 byte: 00
+994 byte: 00
+995 byte: 00
+996 byte: 00
+997 byte: 00
+998 byte: 00
+999 byte: 00
+1000 byte: 00
+1001 byte: 00
+1002 byte: 00
+1003 byte: 00
+1004 byte: 00
+1005 byte: 00
+1006 byte: 00
+1007 byte: 00
+1008 byte: 00
+1009 byte: 00
+1010 byte: 00
+1011 byte: 00
+1012 byte: 00
+1013 byte: 00
+1014 byte: 00
+1015 byte: 00
+1016 byte: 00
+1017 byte: 00
+1018 byte: 00
+1019 byte: 00
+1020 byte: 00
+1021 byte: 00
+1022 byte: 00
+1023 byte: 00
+-------Telling slave EOF: CMD 130------
+Now waiting for slave
+Measured file size: 152096
+Actual file size: 152096
+Closing file..... 
+[0;32mI (15051) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+Guru Meditation Error: Core  0 panic'ed (Stack protection fault). 
+
+Detected in task "main" at 0x40809494
+Stack pointer: 0x40811e70
+Stack bounds: 0x40811e74 - 0x40812e70
+
+
+Core  0 register dump:
+MEPC    : 0x408094b6  RA      : 0x40806f38  SP      : 0x40811e70  GP      : 0x4080de34  
+TP      : 0x40812e70  T0      : 0x40028140  T1      : 0x10000000  T2      : 0x72656e65  
+S0/FP   : 0x40812e78  S1      : 0x00000000  A0      : 0x40812e78  A1      : 0x00000000  
+A2      : 0x00000000  A3      : 0x00000001  A4      : 0x00000001  A5      : 0x00000001  
+A6      : 0x42008f88  A7      : 0x0000000a  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x40811cc4  S5      : 0x408120e0  S6      : 0x4202396a  S7      : 0x00000000  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x408120f4  S11     : 0x00000001  
+T3      : 0x00000000  T4      : 0x40813f9c  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x0000001b  MTVAL   : 0x0ce68e63  
+MHARTID : 0x00000000  
+
+Stack memory:
+40811e70: 0x00001000 0x00000000 0x40813734 0x40806f38 0x00000000 0x00000000 0x40813734 0x40807494
+40811e90: 0x40812e70 0x40028140 0x10000000 0x00000000 0x0000004f 0x00000000 0x00000000 0x00000064
+40811eb0: 0x00000000 0x00000080 0x60000000 0x00000060 0x0000000a 0x40812e78 0x40813734 0x40807670
+40811ed0: 0x40811cc4 0x00000004 0x4080d80c 0x40801bf8 0x00000002 0x00000000 0x408120f4 0x00000001
+40811ef0: 0x00000000 0x00000000 0x00000060 0x40801cb4 0x4002086a 0x40801f4e 0xe07e8000 0x42009062
+40811f10: 0x40812e70 0x00000000 0x408120f4 0x40812ed0 0x00000060 0x40811cc4 0x00000006 0x4200ae9c
+40811f30: 0x40812e70 0x40028140 0x10000000 0x40812ed0 0x40811cc4 0x4080fe1c 0x00000060 0x4200a6b0
+40811f50: 0x00000060 0x40811cc4 0x00000005 0x4200ae9c 0x00000019 0x40812e78 0x4081378c 0x40811cc4
+40811f70: 0x00000060 0x40812ed0 0x40810858 0x4003071e 0x00000001 0x00000000 0x40810858 0x00000002
+40811f90: 0x40812ed0 0x40812ed0 0x40810858 0x4003079a 0x00000004 0x408109ec 0x40811ffc 0x40801b64
+11cc4 0x00000007 0x40810858
+40811fd0: 0x42023908 0x42023908 0x408109ec 0x00000001 0x408120f4 0x00000000 0x4202396c 0x00000009
+40811ff0: 0x00000000 0x00000008 0x40812ed0 0x40810858 0x4202396a 0x00000009 0x408120e0 0x4003a49c
+40812010: 0x42023908 0x42023908 0x00000002 0x4003e118 0x40812ed0 0x00000064 0x00000005 0x4202396a
+40812030: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000060 0x00000001 0x00000001
+40812050: 0x00000000 0x4004e20c 0x00000000 0x00000000 0x00000000 0x00000000 0xffffffff 0x7fefffff
+40812070: 0x00000000 0x3fe00000 0x00000001 0x40801cb4 0x00000000 0x3fc00000 0x00000000 0x40300000
+40812090: 0x00000000 0x00000018 0x40812ed0 0x408109ec 0x420230cd 0x00000001 0x40812180 0x408124b0
+408120b0: 0x420230cd 0x00000001 0x00000001 0x00000009 0x00000000 0x00000064 0x00000006 0x420230cd
+408120d0: 0x00000000 0x00000000 0x00000000 0x00000000 0x408120ec 0x00000001 0x00000002 0x4202396a
+408120f0: 0x00000002 0x4081218f 0x00000001 0x00000000 0x00000000 0x00000000 0xffffffff 0x7fefffff
+40812110: 0x00000000 0x3fe00000 0x00000000 0x40300000 0x00000000 0x3fc00000 0x00000000 0x40300000
+40812130: 0x4081213c 0x00000000 0x00000000 0x40812508 0x00000000 0x008121df 0x00000001 0x40812518
+40812150: 0x00000000 0x00a5a5a5 0xa5a5a5a5 0x00000001 0x00000000 0x00000000 0x00000000 0x42022d5e
+40812170: 0x4081217c 0x00000000 0x00000000 0x42022dc4 0x4081218c 0x00000000 0x31000000 0x30353035
+40812190: 0xffffffff 0x4081222a 0x00000006 0x4081222f 0x00000001 0x4080b4a0 0x40812220 0x4080de34
+408121b0: 0x40812e70 0x40030dca 0x0000000f 0xffffffff 0x40807ffc 0x4080808e 0x40812240 0x00802000
+408121d0: 0x40812e70 0x40027bd4 0x01eb01ea 0x4080b1d8 0x00000081 0x00000100 0x00000001 0x00000000
+408121f0: 0x00000001 0x00000004 0x700000bb 0x700000bb 0x0000001c 0x00000040 0x40813bd0 0x00000000
+40812210: 0x00003acb 0x00138600 0x001385c0 0x4080d2d2 0x42023838 0x408123f8 0x353100bb 0x36393032
+40812230: 0x00000007 0x00000002 0x00000001 0x40808f88 0x00000000 0x00000100 0x4080e1f4 0x42015826
+40812250: 0x00000000 0xffffffff 0x4080e1f4 0x408027ae 0x00000000 0xffffffff 0x4080e1f4 0x40801ee6
+
+
+
+ELF file SHA256: 69333c1e5
+
+Rebooting...
+[0;32mI (17) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Jun  2 2025 15:53:48[0m
+[0;32mI (19) boot: chip revision: v0.1[0m
+[0;32mI (19) boot: efuse block revision: v0.3[0m
+[0;32mI (21) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (29) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (33) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (40) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (46) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (53) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (59) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (66) boot:  3 storage          Unknown data     01 82 00110000 00180000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0b340h ( 45888) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001b368 vaddr=40800000 size=04cb0h ( 19632) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1d5e0h (120288) map[0m
+[0;32mI (154) esp_image: segment 3: paddr=0003d608 vaddr=40804cb0 size=0897ch ( 35196) load[0m
+[0;32mI (170) esp_image: segment 4: paddr=00045f8c vaddr=4080d630 size=018f0h (  6384) load[0m
+[0;32mI (181) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (181) boot: Disabling RNG early entropy source...[0m
+[0;32mI (191) cpu_start: Unicore app[0m
+[0;32mI (200) cpu_start: Pro cpu start user code[0m
+[0;32mI (200) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (200) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     spi_slave_sender[0m
+[0;32mI (205) app_init: App version:      fbd857a-dirty[0m
+[0;32mI (209) app_init: Compile time:     Jun  3 2025 09:39:44[0m
+[0;32mI (214) app_init: ELF file SHA256:  69333c1e5...[0m
+[0;32mI (219) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (222) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (226) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (230) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (240) heap_init: At 4080FEA0 len 0006C770 (433 KiB): RAM[0m
+[0;32mI (245) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (251) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (260) spi_flash: flash io: dio[0m
+[0;33mW (263) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (275) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (281) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (288) coexist: coex firmware version: e727207[0m
+[0;32mI (306) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (307) main_task: Calling app_main()[0m
+Entering app_main()
+[0;32mI (307) spiMaster: Initializing SPIFFS[0m
+[0;32mI (357) spiMaster: Partition size: total: 1438481, used: 153612[0m
+[0;32mI (357) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+-------Telling slave to setup for ota: CMD 128------
+Now waiting for slave

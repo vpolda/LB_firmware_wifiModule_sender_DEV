@@ -1,0 +1,229 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM9 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM9 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpw2qcp1pn"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpw2qcp1pn': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmp3_unuwfr"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmp3_unuwfr': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpz89mitbh"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpz89mitbh': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpjp72vuni"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpjp72vuni': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpvcrjbock"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpvcrjbock': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmp6roj9e3n"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmp6roj9e3n': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpq9ht98mw"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpq9ht98mw': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpmdn7ar8d"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpmdn7ar8d': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmp3_2c00hz"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmp3_2c00hz': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpn9o1u6r8"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpn9o1u6r8': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpngqpraia"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpngqpraia': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpd6pa7s0z"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpd6pa7s0z': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpc030ufna"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpc030ufna': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpi57lnfzm"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpi57lnfzm': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpnka8l290"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmpnka8l290': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4200bc7e: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:161
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc80: app_main at C:/Projects/Wifi_Module/software/spiMaster_test/sender/main/app_main.c:162
+--- 0x4201ce6c: main_task at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/freertos/app_startup.c:209 (discriminator 13)
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Users/Tori/esp/v5.4.1/v5.4.1/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Projects\\Wifi_Module\\software\\spiMaster_test\\sender\\build\\spi_slave_sender.elf', '-ex', 'target remote | "c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\Tori\\AppData\\Local\\Temp\\tmp235uus8e"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'c:\\Users\\Tori\\esp\\v5.4.1\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Tori\\AppData\\Local\\Temp\\tmp235uus8e': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0m
+Traceback (most recent call last):
+  File "c:\Users\Tori\esp\v5.4.1\v5.4.1\esp-idf\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt
