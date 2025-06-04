@@ -29,6 +29,7 @@
 #include "esp_spiffs.h"
 
 #include "esp_system.h"
+#include <esp_partition.h>
 
 
 /*
@@ -70,8 +71,8 @@ task waits for this semaphore to be given before queueing a transmission.
 //#define PART_FILE
 #define PART_FILE_NUM       3
 //#define DEBUG_SENDBUFFER
-#define DEBUG_SENDBUFFER_LAST
-#define DEBUG_FREAD_SIZE
+//#define DEBUG_SENDBUFFER_LAST
+//#define DEBUG_FREAD_SIZE
 
 
 static const char *TAG = "spiMaster";
@@ -228,12 +229,8 @@ void app_main(void)
         ESP_LOGI(TAG, "Partition size: total: %d, used: %d", total, used);
     }
 
-//-----------------------ADDED------------------------//
 
-    //Create the semaphore.
-    //rdySem = xSemaphoreCreateBinary();
     //Set up handshake line interrupt.
-    
     gpio_config(&io_conf);
     gpio_install_isr_service(0);
     gpio_set_pull_mode(GPIO_HANDSHAKE, GPIO_PULLDOWN_ONLY);
@@ -261,8 +258,9 @@ void app_main(void)
 
     //send dummy command
     //tell the slave to get in image download mode
+    #ifdef DEBUG
     printf("-------Telling slave to setup for ota: CMD 128------\n");
-
+    #endif
     //cmd to start ota
     sendbuf[0] = 128;
 
@@ -277,8 +275,9 @@ void app_main(void)
 
     do {
         //tell the slave to get in image download mode
+        #ifdef DEBUG
         printf("-------Telling slave to setup for ota: CMD 128------\n");
-
+        #endif
         //cmd to start ota
         sendbuf[0] = 128;
 
@@ -324,13 +323,17 @@ void app_main(void)
     1
     #endif 
     ) {
+        #ifdef DEBUG
         printf("-------Entering reading a new chunk: CMD 129------\n");
-        
+        #endif
+
         //read buffer call
         uint16_t read_bytes = read_file_chunk(file, sendbuf, DATA_SIZE);
 
         if ( read_bytes > 0 ){
+            #ifdef DEBUG
             printf("Chunk of file: %d\n", n);
+            #endif
 
             #ifdef DEBUG_FREAD_SIZE
             printf("Full Size: %02X\n", read_bytes);
@@ -348,32 +351,30 @@ void app_main(void)
                 printf("%d byte: %02X\n", i, sendbuf[i]);
             }
             #endif
-             
-            vTaskDelay(10);
 
             //Wait for slave to be ready for next byte before sending
-            printf("Now waiting for slave\n");
+            #ifdef DEBUG 
+            printf("Now waiting for slave\n"); 
+            #endif
             //xSemaphoreTake(rdySem, portMAX_DELAY); //Wait until slave is ready
             while(gpio_get_level(GPIO_HANDSHAKE) != 1) {
-                vTaskDelay(10);
+                vTaskDelay(1);
             }
 
             ret = spi_device_transmit(handle, &t);
 
-            vTaskDelay(10);
-
             n++;
+
             if (read_bytes < DATA_SIZE) {
+                #ifdef DEBUG
                 printf("End of file reached, last chunk comming of bytes: %d\n", read_bytes);
+                #endif
 
                 #ifdef DEBUG_SENDBUFFER_LAST
                 for (int i = 900; i < TRANS_SIZE; i++) {
                     printf("%d byte: %02X\n", i, sendbuf[i]);
                 }
                 #endif
-
-                //EOF reached
-                printf("EOF!\n");
                 break;
             }
             //otherwise, keep looping
@@ -389,7 +390,10 @@ void app_main(void)
     }
     
     //now tell slave its at the end of the file
+    #ifdef DEBUG
     printf("-------Telling slave EOF: CMD 130------\n");
+    #endif
+
     //cmd to end ota
     sendbuf[0] = 130;
     sendbuf[1] = 0;
@@ -409,7 +413,10 @@ void app_main(void)
     t.rx_buffer = recvbuf;
 
     //Wait for slave to be ready for next byte before sending
+    #ifdef DEBUG
     printf("Now waiting for slave\n");
+    #endif
+
     //xSemaphoreTake(rdySem, portMAX_DELAY); //Wait until slave is ready
     while(gpio_get_level(GPIO_HANDSHAKE) != 1) {
         vTaskDelay(1);
