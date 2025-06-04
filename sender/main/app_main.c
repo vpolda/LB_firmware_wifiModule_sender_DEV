@@ -53,6 +53,9 @@ task waits for this semaphore to be given before queueing a transmission.
 #define GPIO_SCLK           6
 #define GPIO_CS             7
 
+#define GPIO_SLAVE_RST 11
+#define GPIO_SLAVE_FACTORY_BOOT 4
+
 #ifdef CONFIG_IDF_TARGET_ESP32
 #define SENDER_HOST HSPI_HOST
 #else
@@ -74,14 +77,17 @@ task waits for this semaphore to be given before queueing a transmission.
 //#define DEBUG_SENDBUFFER_LAST
 //#define DEBUG_FREAD_SIZE
 
+#define FACTORY_RESET
+//#define OTA
 
+#ifdef OTA
 static const char *TAG = "spiMaster";
 
 //file shouldn't be more than 2MB, both of these are in bytes
 int binary_file_length;
 uint32_t file_size;
 
-char file_name[] = "/spiffs/simple_ota.bin";
+char file_name[] = "/spiffs/native_ota.bin";
 
 static void open_file(FILE** file)
 {
@@ -91,7 +97,7 @@ static void open_file(FILE** file)
     ESP_LOGI(TAG, "Reading file");
 
     // Open for reading hello.txt
-    *file = fopen("/spiffs/simple_ota.bin", "r");
+    *file = fopen(file_name, "r");
     if (*file == NULL) {
         ESP_LOGE(TAG, "Failed to open file");
         return;
@@ -150,12 +156,39 @@ static void close_file(FILE* file) {
         fclose(file);
 }
 //-----------------------ADDED------------------------//
-
+#endif
 
 //Main application
 void app_main(void)
 {
     printf("Entering app_main()\n");
+
+    #ifdef FACTORY_RESET
+    gpio_set_direction(GPIO_SLAVE_RST, GPIO_MODE_OUTPUT);
+    gpio_set_level(GPIO_SLAVE_RST, 1);
+
+    gpio_set_direction(GPIO_SLAVE_FACTORY_BOOT, GPIO_MODE_OUTPUT);
+    gpio_set_level(GPIO_SLAVE_FACTORY_BOOT, 0);
+    #endif
+
+    //GPIO config for the handshake line.
+    gpio_config_t io_conf = {
+        .intr_type = GPIO_INTR_POSEDGE,
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = 1,
+        .pin_bit_mask = BIT64(GPIO_HANDSHAKE),
+    };
+    
+    //Set up handshake line interrupt.
+    gpio_config(&io_conf);
+    gpio_install_isr_service(0);
+    gpio_set_pull_mode(GPIO_HANDSHAKE, GPIO_PULLDOWN_ONLY);
+
+
+
+
+
+    #ifdef OTA
     //esp_err_t ret;
     spi_device_handle_t handle;
     //Configuration for the SPI bus
@@ -178,14 +211,6 @@ void app_main(void)
         .spics_io_num = GPIO_CS,
         .cs_ena_posttrans = 3,      //Keep the CS low 3 cycles after transaction, to stop slave from missing the last bit when CS has less propagation delay than CLK
         .queue_size = 1
-    };
-
-    //GPIO config for the handshake line.
-    gpio_config_t io_conf = {
-        .intr_type = GPIO_INTR_POSEDGE,
-        .mode = GPIO_MODE_INPUT,
-        .pull_up_en = 1,
-        .pin_bit_mask = BIT64(GPIO_HANDSHAKE),
     };
     
 
@@ -229,11 +254,8 @@ void app_main(void)
         ESP_LOGI(TAG, "Partition size: total: %d, used: %d", total, used);
     }
 
-
-    //Set up handshake line interrupt.
-    gpio_config(&io_conf);
-    gpio_install_isr_service(0);
-    gpio_set_pull_mode(GPIO_HANDSHAKE, GPIO_PULLDOWN_ONLY);
+    //GPIO slave boot mode
+    //gpio_set_pull_mode(GPIO_SLAVE_RST, GPIO_PULLDOWN_ONLY);
    
     //Initialize the SPI bus and add the device we want to send stuff to.
 
@@ -430,11 +452,40 @@ void app_main(void)
     printf("Closing file..... \n");
     close_file(file);
 
-    //ret = spi_bus_remove_device(handle);
-    //assert(ret == ESP_OK);
+    #endif
 
-    //esp_restart();
+    //Pretend we need to rollback the slave to its factory image
+    #ifdef FACTORY_RESET
+    printf("Resetting slave to factory partition!\n");
 
-    //ret = spi_bus_remove_device(handle);
-    //assert(ret == ESP_OK);
+    //then reset and put it into factory boot mode
+    printf("Waiting on slave to confirm running on GPIO %d \n", GPIO_HANDSHAKE);
+    vTaskDelay(pdMS_TO_TICKS(10000));
+    //while(gpio_get_level(GPIO_HANDSHAKE) != 1) {
+         //vTaskDelay(1);
+    //}
+    
+    gpio_set_level(GPIO_SLAVE_FACTORY_BOOT, 1);
+
+    printf("Restarting and booting slave in Factory over GPIO %d \n", GPIO_SLAVE_RST);
+    gpio_set_level(GPIO_SLAVE_RST, 0);
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    
+    gpio_set_level(GPIO_SLAVE_RST, 1);
+
+    vTaskDelay(pdMS_TO_TICKS(1500));
+
+
+    printf("Verify Slave is rebooting and from factory\n");
+    gpio_set_level(GPIO_SLAVE_FACTORY_BOOT, 0);
+
+    printf("Waiting on slave to confirm running on GPIO %d \n", GPIO_HANDSHAKE);
+    while(gpio_get_level(GPIO_HANDSHAKE) != 1) {
+        vTaskDelay(1);
+    }
+
+    printf("Slave should have booted\n");
+
+
+    #endif
 }
